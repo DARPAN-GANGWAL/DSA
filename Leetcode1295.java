@@ -17,7 +17,7 @@ public class Leetcode1295 {
     }
 
     public static boolean even(int num) {
-        int d=digits(num);
+        int d=digits2(num);
         if(d%2==0){
             return true;
         }
@@ -30,8 +30,14 @@ public class Leetcode1295 {
             num=num/10;
         }
         return count;
-
+    }
+    public static int digits2(int num){
+        if(num<0){
+            num=num*-1;
+        }
+        return (int) (Math.log10(num))+1;
     }
 }
+
 
 
